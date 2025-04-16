@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Code2 className="h-8 w-8 text-purple-400 drop-shadow" />
+            
             <span className="ml-2 text-xl font-bold text-purple-300 tracking-wider drop-shadow">
               Atharv Marathe
             </span>
