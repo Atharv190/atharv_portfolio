@@ -88,7 +88,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-medium border border-white/20 animate-border-pulse"
             >
-              📄 Download Resume
+              📄 Download CV
             </a>
             <div className="flex gap-3">
               <a
@@ -109,6 +109,12 @@ const Hero = () => {
               >
                 <Linkedin className="h-6 w-6" />
               </a>
+               <a
+              href="mailto:atharvmarathe5@gmail.com"
+              className="text-gray-400 hover:text-yellow-400 transition-transform hover:scale-125 duration-200"
+            >
+              <Mail className="h-5 w-5" />
+            </a>
               <a
   href="https://www.codechef.com/users/atharvmarathe" 
   target="_blank"
