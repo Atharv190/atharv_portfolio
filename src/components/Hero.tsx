@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Terminal, Code, Cpu } from 'lucide-react';
+import { Github, Linkedin, Terminal, Code, Cpu, Mail } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -109,12 +109,15 @@ const Hero = () => {
               >
                 <Linkedin className="h-6 w-6" />
               </a>
-               <a
-              href="mailto:atharvmarathe5@gmail.com"
-              className="text-gray-400 hover:text-yellow-400 transition-transform hover:scale-125 duration-200"
-            >
-              <Mail className="h-5 w-5" />
-            </a>
+              <a
+  href="mailto:atharvmarathe5@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  title="Email"
+  className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white transition-colors animate-icon-float-extra-delay"
+>
+  <Mail className="h-6 w-6" />
+</a>
               <a
   href="https://www.codechef.com/users/atharvmarathe" 
   target="_blank"
