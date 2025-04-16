@@ -116,7 +116,7 @@ const Hero = () => {
   title="Email"
   className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white transition-colors animate-icon-float-extra-delay"
 >
-  <Mail className="h-6 w-6" />
+   <Mail className="h-6 w-6 animate-icon-float" />
 </a>
               <a
   href="https://www.codechef.com/users/atharvmarathe" 
