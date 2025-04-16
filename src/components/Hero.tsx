@@ -49,7 +49,7 @@ const Hero = () => {
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 mb-2">
-            Atharv Marathe
+            Hi, I'm Atharv 
           </h1>
 
           <p className="text-base sm:text-xl text-gray-400 mb-6 font-mono animate-typing overflow-hidden whitespace-nowrap border-r-2 border-gray-400 pr-4 w-[32ch] mx-auto">
