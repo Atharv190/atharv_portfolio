@@ -98,7 +98,7 @@ const Hero = () => {
                 title="GitHub"
                 className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white transition-colors animate-icon-float"
               >
-                <Github className="h-6 w-6" />
+                <Github className="h-6 w-6 animate-icon-float" />
               </a>
               <a
                 href="https://www.linkedin.com/in/atharvmarathe19"
@@ -107,7 +107,7 @@ const Hero = () => {
                 title="LinkedIn"
                 className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white transition-colors animate-icon-float-delay"
               >
-                <Linkedin className="h-6 w-6" />
+                <Linkedin className="h-6 w-6 animate-icon-float" />
               </a>
               <a
   href="mailto:atharvmarathe5@gmail.com"
@@ -116,7 +116,7 @@ const Hero = () => {
   title="Email"
   className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white transition-colors animate-icon-float-extra-delay"
 >
-   <Mail className="h-6 w-6 " />
+   <Mail className="h-6 w-6 animate-icon-float " />
 </a>
               <a
   href="https://www.codechef.com/users/atharvmarathe" 
@@ -128,7 +128,7 @@ const Hero = () => {
   <img
     src="https://cdn.codechef.com/images/cc-logo.svg"
     alt="CodeChef"
-    className="h-6 w-6"
+    className="h-6 w-6 animate-icon-float"
   />
 </a>
             </div>
