@@ -92,7 +92,10 @@ const Projects = () => {
         </motion.div>
 
         {/* Horizontal Scroll Cards */}
-        <div className="flex gap-6 overflow-x-auto pb-6 scrollbar-hide touch-pan-x">
+        <div
+          className="flex gap-6 overflow-x-auto pb-6 touch-pan-x"
+          style={{ WebkitOverflowScrolling: 'touch' }}
+        >
           {projects.map((project, index) => (
             <motion.div
               key={index}
