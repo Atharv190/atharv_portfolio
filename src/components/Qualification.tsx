@@ -6,7 +6,7 @@ const qualifications = [
     title: "B.Tech in Computer Engineering",
     institute: "R. C. Patel Institute of Technology, Shirpur",
     year: "2023 - 2027",
-    percentage: "8.52",
+    percentage: "8.72",
     description:
       "Currently pursuing with a strong focus on Web Development, Data Structures, and the MERN Stack.",
   },
@@ -67,3 +67,4 @@ const Qualification = () => {
 };
 
 export default Qualification;
+
