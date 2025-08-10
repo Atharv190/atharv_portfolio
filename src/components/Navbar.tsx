@@ -17,9 +17,7 @@ const Navbar = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
   const navLinks = [
@@ -35,17 +33,23 @@ const Navbar = () => {
     <nav
       className={`fixed w-full z-50 shadow-xl transition-transform duration-300 ${
         showNavbar ? 'translate-y-0' : '-translate-y-full'
-      } bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-opacity-80 backdrop-blur-md border-b border-purple-500/30`}
+      } bg-gray-900 bg-opacity-70 backdrop-blur-lg border-b border-purple-500/30`}
+      style={{
+        background:
+          'linear-gradient(90deg, rgba(139,92,246,0.3) 0%, rgba(59,130,246,0.3) 100%)',
+        backdropFilter: 'blur(12px)',
+      }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-<div className="flex items-center">
+          <div className="flex items-center">
             <Code2 className="h-8 w-8 text-purple-400 drop-shadow" />
             <span className="ml-2 text-xl font-bold text-purple-300 tracking-wider drop-shadow">
-              Atharv Marathe
+              Atharv's Portfolio
             </span>
           </div>
+
           {/* Desktop Links */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-6">
@@ -53,7 +57,7 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="relative px-5 py-2 rounded-lg text-sm font-semibold text-gray-100 transition-all duration-300 ease-in-out hover:bg-purple-600/10 hover:text-white hover:scale-105 hover:shadow-lg"
+                  className="relative px-5 py-2 rounded-lg text-sm font-semibold text-gray-100 transition-all duration-300 ease-in-out hover:bg-purple-600/20 hover:text-white hover:scale-105 hover:shadow-lg"
                 >
                   {link.name}
                 </a>
@@ -66,6 +70,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-purple-300 hover:text-white focus:outline-none"
+              aria-label="Toggle menu"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
