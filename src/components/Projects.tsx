@@ -26,7 +26,7 @@ const Projects = () => {
       title: "Internet Service Complaint System",
       description: `A Java-based web system to efficiently log, track, and manage internet service complaints.
       Features include complaint registration, status tracking, service personnel assignment, and customer notifications.`,
-      image: "/images/internet1.png",
+      image: "/images/int1.png",
       icon: <Wifi className="h-6 w-6" />,
       tech: ["Core Java","Advanced Java", "JSP", "Servlets", "MySQL", "HTML5", "CSS3", "JavaScript", "Bootstrap", ],
       github: "https://github.com/your-username/internet-service-complaint",
@@ -35,7 +35,7 @@ const Projects = () => {
       title: "Motor Service Reminder App",
       description: `Spring Boot-powered backend for vehicle service management that automates service reminders, appointment bookings, and service history tracking.
       Designed with Hibernate ORM and RESTful APIs, providing a scalable and secure solution.`,
-      image: "/images/motor.jpeg",
+      image: "/images/mot1.jpeg",
       icon: <Wrench className="h-6 w-6" />,
       tech: ["Spring Boot", "Hibernate", "REST API", "MySQL", "Spring Security", "Spring MVC","JWT", "Maven"],
       github: "https://github.com/your-username/motor-service-reminder",
@@ -91,15 +91,12 @@ const Projects = () => {
           <div className="w-24 h-1 mt-4 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full"></div>
         </motion.div>
 
-        {/* Horizontal Scroll Cards */}
-        <div
-          className="flex gap-6 overflow-x-auto pb-6 touch-pan-x"
-          style={{ WebkitOverflowScrolling: 'touch' }}
-        >
+        {/* Grid layout with 2 columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="flex-shrink-0 w-72 sm:w-80 rounded-xl overflow-hidden bg-white/5 backdrop-blur-md border border-white/10 hover:border-purple-500/50 transition-all duration-300"
+              className="rounded-xl overflow-hidden bg-white/5 backdrop-blur-md border border-white/10 hover:border-purple-500/50 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
             >
               {/* Image */}
