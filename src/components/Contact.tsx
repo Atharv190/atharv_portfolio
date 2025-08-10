@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Send, MessageSquare, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, Send} from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -148,3 +148,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
