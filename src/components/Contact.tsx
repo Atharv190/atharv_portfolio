@@ -1,39 +1,38 @@
-import { Mail, Phone, MapPin, Send} from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
+
+const contactInfo = [
+  {
+    icon: <Mail className="w-6 h-6" />,
+    title: 'Email',
+    value: 'atharvmarathe5@gmail.com',
+    bgColor: 'bg-purple-600/20',
+    textColor: 'text-purple-400',
+  },
+  {
+    icon: <Phone className="w-6 h-6" />,
+    title: 'Phone',
+    value: '+91 9028657039',
+    bgColor: 'bg-blue-600/20',
+    textColor: 'text-blue-400',
+  },
+  {
+    icon: <MapPin className="w-6 h-6" />,
+    title: 'Location',
+    value: 'Shirpur, Dhule',
+    bgColor: 'bg-indigo-600/20',
+    textColor: 'text-indigo-400',
+  },
+];
 
 const Contact = () => {
   return (
-    <section
-      id="contact"
-      className="relative py-20 overflow-hidden bg-gradient-to-br from-black via-[#0a0a0f] to-black"
-    >
-      {/* Animated Gradient Overlay */}
-      <div className="absolute inset-0 animate-pulse bg-[radial-gradient(circle_at_20%_30%,rgba(139,92,246,0.2),transparent),radial-gradient(circle_at_80%_70%,rgba(59,130,246,0.2),transparent)]"></div>
-
-      {/* Floating particles */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(25)].map((_, i) => (
-          <motion.span
-            key={i}
-            className="absolute w-1.5 h-1.5 bg-purple-400 rounded-full"
-            initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-              opacity: 0.3,
-              scale: Math.random() * 0.8 + 0.2,
-            }}
-            animate={{
-              y: [null, Math.random() * window.innerHeight],
-              x: [null, Math.random() * window.innerWidth],
-              opacity: [0.3, 0.8, 0.3],
-            }}
-            transition={{
-              duration: Math.random() * 8 + 4,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          />
-        ))}
+    <section id="contact" className="relative py-20 overflow-hidden bg-gray-900">
+      
+      {/* Blurred purple & blue circles for background - matching Skills section style */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-1/2 -left-1/2 w-full h-full bg-blue-500/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -48,7 +47,7 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-2">
             Let’s Build Something <span className="text-purple-400">Amazing</span>
           </h2>
-          <div className="w-24 h-1 mt-4 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 mt-4 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full" />
         </motion.div>
 
         {/* Grid layout */}
@@ -60,39 +59,18 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            {[
-              {
-                icon: <Mail className="w-6 h-6" />,
-                title: 'Email',
-                value: 'atharvmarathe5@gmail.com',
-                color: 'purple',
-              },
-              {
-                icon: <Phone className="w-6 h-6" />,
-                title: 'Phone',
-                value: '+91 9028657039',
-                color: 'blue',
-              },
-              {
-                icon: <MapPin className="w-6 h-6" />,
-                title: 'Location',
-                value: 'Shirpur, Dhule',
-                color: 'indigo',
-              },
-            ].map((item, i) => (
+            {contactInfo.map(({ icon, title, value, bgColor, textColor }, i) => (
               <motion.div
                 key={i}
                 whileHover={{ scale: 1.05 }}
                 className="flex items-center gap-5 bg-white/5 backdrop-blur-lg p-5 rounded-xl border border-white/10 hover:shadow-lg hover:shadow-purple-500/20 transition-all"
               >
-                <div
-                  className={`p-4 rounded-xl bg-${item.color}-600/20 text-${item.color}-400`}
-                >
-                  {item.icon}
+                <div className={`${bgColor} ${textColor} p-4 rounded-xl`}>
+                  {icon}
                 </div>
                 <div>
-                  <p className="text-sm text-gray-400">{item.title}</p>
-                  <p className="text-lg font-semibold text-white">{item.value}</p>
+                  <p className="text-sm text-gray-400">{title}</p>
+                  <p className="text-lg font-semibold text-white">{value}</p>
                 </div>
               </motion.div>
             ))}
@@ -104,13 +82,17 @@ const Contact = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
+            // TODO: Add onSubmit handler here
           >
             <div className="space-y-6">
               {['Name', 'Email'].map((label, i) => (
                 <div key={i} className="relative">
                   <input
                     type={label === 'Email' ? 'email' : 'text'}
+                    name={label.toLowerCase()}
                     placeholder=" "
+                    required
+                    aria-label={label}
                     className="peer w-full px-4 pt-5 pb-2 bg-transparent border border-white/20 rounded-lg text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
                   />
                   <label className="absolute left-4 top-2 text-sm text-gray-400 transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-purple-400">
@@ -122,9 +104,12 @@ const Contact = () => {
               <div className="relative">
                 <textarea
                   rows={4}
+                  name="message"
                   placeholder=" "
+                  required
+                  aria-label="Message"
                   className="peer w-full px-4 pt-5 pb-2 bg-transparent border border-white/20 rounded-lg text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
-                ></textarea>
+                />
                 <label className="absolute left-4 top-2 text-sm text-gray-400 transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-purple-400">
                   Message
                 </label>
@@ -148,4 +133,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
