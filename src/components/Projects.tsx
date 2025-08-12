@@ -13,13 +13,13 @@ const Projects = () => {
       github: "https://github.com/Atharv190/Text-File-Hider",
     },
     {
-      title: "ATS Score Checker",
+      title: "ATS Resume Score Checker Website with Gemini AI ",
       description: `Web application that analyzes candidate resumes against job descriptions to calculate an Applicant Tracking System (ATS) compatibility score.
       Utilizes OCR to extract text, natural language processing for keyword matching, and offers an intuitive UI for resume improvement.`,
       image: "/images/ats-checker.png",
       icon: <ShieldCheck className="h-6 w-6" />,
-      tech: ["React", "Bootstrap", "Node.js", "Express", "Flask", "Python", "MySQL", "OCR", "NLP", "REST API", "TF-IDF", "Cosine Similarity"],
-      github: "https://github.com/your-username/ats-score-checker",
+      tech: ["React", "Bootstrap", "Node.js", "Express", "Flask", "Python", "MySQL", "OCR", "NLP", "Cosine Similarity"],
+      github: "https://github.com/Atharv190/ats-score-checker",
       live: "#",
     },
     {
@@ -29,7 +29,7 @@ const Projects = () => {
       image: "/images/int1.png",
       icon: <Wifi className="h-6 w-6" />,
       tech: ["Core Java","Advanced Java", "JSP", "Servlets", "MySQL", "HTML5", "CSS3", "JavaScript", "Bootstrap", ],
-      github: "https://github.com/your-username/internet-service-complaint",
+      github: "https://github.com/Atharv190/internet-service-complaint",
     },
     {
       title: "Motor Service Reminder App",
@@ -38,8 +38,16 @@ const Projects = () => {
       image: "/images/mot1.jpeg",
       icon: <Wrench className="h-6 w-6" />,
       tech: ["Spring Boot", "Hibernate", "REST API", "MySQL", "Spring Security", "Spring MVC","JWT", "Maven"],
-      github: "https://github.com/your-username/motor-service-reminder",
+      github: "https://github.com/Atharv190/motor-service-reminder",
     },
+    {
+    title: "Alumni Tracking Portal",
+    description: `Java-based web portal for managing and tracking alumni data, interactions, and engagement. Features include profile management, event updates, communication tools, and analytics for alumni activity insights. Built with advanced Java technologies and a secure, modular architecture.`,
+     image: "/images/alumni-portal.jpeg",
+    icon: <UserGroup className="h-6 w-6" />,
+    tech: ["Java", "JSP/Servlets", "JDBC", "MySQL", "HTML/CSS", "JavaScript", "MVC Architecture"],
+    github: "https://github.com/Atharv190/alumni-tracking-portal"
+  }
   ];
 
   return (
@@ -148,3 +156,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
