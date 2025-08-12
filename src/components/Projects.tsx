@@ -40,6 +40,14 @@ const Projects = () => {
       tech: ["Spring Boot", "Hibernate", "REST API", "MySQL", "Spring Security", "Spring MVC","JWT", "Maven"],
       github: "https://github.com/Atharv190/motor-service-reminder",
     },
+     {
+    title: "Alumni Tracking Portal",
+    description: `Java-based web portal for managing and tracking alumni data, interactions, and engagement. Features include profile management, event updates, communication tools, and analytics for alumni activity insights. Built with advanced Java technologies and a secure, modular architecture.`,
+     image: "/images/alumni-portal.jpeg",
+    icon: <UserGroup className="h-6 w-6" />,
+    tech: ["Java", "JSP/Servlets", "JDBC", "MySQL", "HTML/CSS", "JavaScript", "MVC Architecture"],
+    github: "https://github.com/Atharv190/alumni-tracking-portal"
+  },
    
   ];
 
@@ -149,5 +157,6 @@ const Projects = () => {
 };
 
 export default Projects;
+
 
 
